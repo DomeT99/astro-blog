@@ -2,10 +2,36 @@
 import { menuOptions } from "../../utils/data";
 ---
 
+<script>
+  function openBurger() {
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll(".navbar-burger"),
+      0
+    );
+
+    $navbarBurgers.forEach((element) => {
+      element.addEventListener("click", () => {
+        const target = element.dataset.target;
+        const $target = document.getElementById(target) as HTMLElement;
+
+        element.classList.toggle("is-active");
+
+        $target!.classList.toggle("is-active");
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    openBurger();
+  });
+</script>
+
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand mt-4 mb-2 ml-2">
     <a class="navbar-item" href="/">
-      <h1 class="is-size-3 is-size-5-mobile dark-gray f-normal">DOMENICO TENACE</h1>
+      <h1 class="is-size-3 is-size-5-mobile dark-gray f-normal">
+        DOMENICO TENACE
+      </h1>
     </a>
 
     <a
@@ -35,27 +61,3 @@ import { menuOptions } from "../../utils/data";
     </div>
   </div>
 </nav>
-
-<script>
-  function openBurger() {
-    const $navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll(".navbar-burger"),
-      0
-    );
-
-    $navbarBurgers.forEach((element) => {
-      element.addEventListener("click", () => {
-        const target = element.dataset.target;
-        const $target = document.getElementById(target) as HTMLElement;
-
-        element.classList.toggle("is-active");
-
-        $target!.classList.toggle("is-active");
-      });
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    openBurger();
-  });
-</script>

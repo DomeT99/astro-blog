@@ -4,9 +4,9 @@ import Footer from "../components/common/Footer.astro";
 import { SEO } from "astro-seo";
 import "../assets/style/main.scss";
 
-export interface Props {
-  pageTitle?: string;
-  pageDescription?: string;
+interface Props {
+  pageTitle: string;
+  pageDescription: string;
 }
 
 const { pageTitle, pageDescription } = Astro.props;
@@ -17,7 +17,7 @@ const { pageTitle, pageDescription } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <SEO
-      title={pageTitle?.includes("404") ? pageTitle : `Domenico Tenace - ${pageTitle}`}
+      title={pageTitle.includes("404") ? pageTitle : `Domenico Tenace - ${pageTitle}`}
       description={pageDescription}
       extend={{
         link: [{ rel: "icon", href: "/favicon.ico" }],
