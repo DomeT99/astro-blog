@@ -14,11 +14,9 @@ const { title, date, description, slug, devLink } = Astro.props;
 
 <div class="card min-18-vh">
   <div class="media-content has-text-left h-6">
-    <a href={slug}>
-      <h4 class="title is-size-4">
-        {title}
-      </h4>
-    </a>
+    <h4 class="title is-size-4">
+      {title}
+    </h4>
     <p class="subtitle is-size-5">{date}</p>
     <div class="columns">
       <div class="column is-11">
@@ -26,6 +24,11 @@ const { title, date, description, slug, devLink } = Astro.props;
       </div>
       <div class="column is-1">
         <a href={devLink}> <Icon size={38} name="fa-brands:dev" /></a>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-12">
+        <a href={slug}><h6 class="orange">Read more</h6></a>
       </div>
     </div>
   </div>
