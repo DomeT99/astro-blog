@@ -1,9 +1,10 @@
 ---
 import { Icon } from "astro-icon";
+import { getFormattedDate } from "../../utils/utils";
 
 interface Props {
   title: string;
-  date: string;
+  date: Date;
   description: string;
   devLink?: string;
   slug?: string;
@@ -17,7 +18,7 @@ const { title, date, description, slug, devLink } = Astro.props;
     <h4 class="title is-size-4">
       {title}
     </h4>
-    <p class="subtitle is-size-5">{date}</p>
+    <p class="subtitle is-size-5">{getFormattedDate(date)}</p>
     <div class="columns">
       <div class="column is-11">
         <p>{description}</p>

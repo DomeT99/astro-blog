@@ -5,6 +5,7 @@ import BlogCard from "../../components/blog/BlogCard.astro";
 import { fetchCollection } from "../../utils/blog";
 
 const posts = await fetchCollection();
+posts.sort((a: any, b: any) => b.data.date - a.data.date);
 ---
 
 <BaseLayout
@@ -22,7 +23,7 @@ const posts = await fetchCollection();
     />
   </section>
   <section
-    class="has-text-centered container h-75 mx-auto mt-6 mb-6 overflow-auto "
+    class="has-text-centered container h-75 mx-auto mt-6 mb-6 overflow-auto"
   >
     <div class="columns is-multiline">
       <div class="column is-12">
