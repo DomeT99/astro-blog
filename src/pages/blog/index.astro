@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/common/Hero.astro";
 import BlogCard from "../../components/blog/BlogCard.astro";
+import Pagination from "../../components/common/Pagination.astro";
 import { fetchCollection } from "../../utils/blog";
 
 const posts = await fetchCollection();
@@ -22,9 +23,8 @@ posts.sort((a: any, b: any) => b.data.date - a.data.date);
       subtitleSizeMobile="is-size-5"
     />
   </section>
-  <section
-    class="has-text-centered container h-75 mx-auto mt-6 mb-6 overflow-auto"
-  >
+  <section class="has-text-centered container mx-auto mt-6 mb-6">
+    <Pagination />
     <div class="columns is-multiline">
       <div class="column is-12">
         {

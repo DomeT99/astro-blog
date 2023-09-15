@@ -1,0 +1,7 @@
+.pagination-previous,
+.pagination-next {
+  border: none;
+  &:active {
+    box-shadow: none;
+  }
+}
