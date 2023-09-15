@@ -38,26 +38,30 @@ p {
   @extend .light-gray;
 }
 
-a{
-
+a {
   @include mixins.generate-font("Prompt", normal, 1.1rem);
   @extend .light-gray;
 }
 
 //Size
-.f-size-17{
+.f-size-17 {
   font-size: 1.7rem !important;
 }
 
 //Weight
-.f-600{
+.f-600 {
   font-weight: 600 !important;
 }
-.f-normal{
+.f-normal {
   font-weight: normal !important;
 }
 
+//Decoration
+.underline {
+  text-decoration: underline;
+}
+
 //Global
-*{
+* {
   @include mixins.generate-font("Prompt", normal, 1.1rem);
 }

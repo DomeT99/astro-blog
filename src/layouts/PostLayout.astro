@@ -11,11 +11,7 @@ interface Props {
   postTitle: string;
 }
 
-const {
-  pageTitle,
-  pageDescription,
-  postTitle,
-} = Astro.props;
+const { pageTitle, pageDescription, postTitle } = Astro.props;
 ---
 
 <!doctype html>
@@ -43,7 +39,8 @@ const {
   <body>
     <Navbar />
     <section class="min-100-vh container mt-6 mb-6">
-      <header class="has-text-centered mr-4 ml-4 m-6-desktop">
+      👈🏻&nbsp;<a class="light-gray underline" href="/blog">Return to blog</a>
+      <header class="has-text-centered mr-4 ml-4 m-6-desktop mt-4">
         <h1 class="is-size-1-desktop is-size-2-tablet is-size-4-mobile black">
           {postTitle}
         </h1>
