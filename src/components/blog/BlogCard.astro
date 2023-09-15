@@ -18,7 +18,11 @@ const { title, date, description, slug, devLink } = Astro.props;
     <h4 class="title is-size-4">
       {title}
     </h4>
-    <p class="subtitle is-size-5">{getFormattedDate(date)}</p>
+    <p class="subtitle is-size-5 is-flex">
+      <Icon class="mr-1" size={22} name="ion:time-outline" />
+      <time datetime={String(date)}> {getFormattedDate(date)}</time>
+    </p>
+
     <div class="columns">
       <div class="column is-11">
         <p>{description}</p>
