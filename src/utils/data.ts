@@ -21,6 +21,10 @@ export const socialButtons: SocialButton[] = [
 
 export const menuOptions: MenuOptions[] = [
   {
+    label: "HOME",
+    url: "/",
+  },
+  {
     label: "BLOG",
     url: "/blog",
   },
