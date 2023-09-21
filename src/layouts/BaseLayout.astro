@@ -17,7 +17,9 @@ const { pageTitle, pageDescription } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <SEO
-      title={pageTitle.includes("404") ? pageTitle : `Domenico Tenace - ${pageTitle}`}
+      title={pageTitle.includes("404")
+        ? pageTitle
+        : `Domenico Tenace - ${pageTitle}`}
       description={pageDescription}
       extend={{
         link: [{ rel: "icon", href: "/favicon.ico" }],
@@ -30,6 +32,10 @@ const { pageTitle, pageDescription } = Astro.props;
             name: "generator",
             content: Astro.generator,
           },
+          {
+            name: "twitter:image",
+            content: "/public/DomenicoTenaceBanner.jpg",
+          }
         ],
       }}
     />
