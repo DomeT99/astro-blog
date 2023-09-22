@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.1-beta",
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev",
