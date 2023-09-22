@@ -1,8 +1,4 @@
-import type {
-  SocialButton,
-  MenuOptions,
-  GitHubRepo
-} from "../types/types";
+import type { SocialButton, MenuOptions, GitHubRepo } from "../types/types";
 
 export const socialButtons: SocialButton[] = [
   {
@@ -12,6 +8,10 @@ export const socialButtons: SocialButton[] = [
   {
     icon: "fa-brands:github",
     url: "https://github.com/DomeT99",
+  },
+  {
+    icon: "fa-brands:dev",
+    url: "https://dev.to/dvalin99",
   },
   {
     icon: "fa-brands:mastodon",
@@ -54,6 +54,5 @@ export const openSourceProjects: GitHubRepo[] = [
   {
     owner: "italia-opensource",
     repo: "awesome-italia-opensource",
-  }
+  },
 ];
-

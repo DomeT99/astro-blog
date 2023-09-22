@@ -32,10 +32,6 @@ const { pageTitle, pageDescription, postTitle } = Astro.props;
             name: "generator",
             content: Astro.generator,
           },
-          {
-            name: "twitter:image",
-            content: "/public/DomenicoTenaceBanner.jpg",
-          }
         ],
       }}
     />
@@ -43,14 +39,16 @@ const { pageTitle, pageDescription, postTitle } = Astro.props;
   <body>
     <Navbar />
     <section class="min-100-vh container mt-6 mb-6">
-      <a class="light-gray is-size-6-mobile ml-4" href="/blog">👈&nbsp;<u class="is-size-6-mobile">Return to blog</u></a>
-      <header class="has-text-centered mr-4 ml-4 m-6-desktop mt-6">
+      <a class="light-gray is-size-6-mobile ml-4" href="/blog"
+        >👈&nbsp;<u class="is-size-6-mobile">Return to blog</u></a
+      >
+      <header class="has-text-centered mr-4 ml-4 m-6-desktop mt-6 fade-in">
         <h1 class="is-size-1-desktop is-size-2-tablet is-size-4-mobile black">
           {postTitle}
         </h1>
       </header>
       <section
-        class="mr-6-desktop ml-6-desktop mr-6-tablet ml-6-tablet ml-4 mr-4"
+        class="mr-6-desktop ml-6-desktop mr-6-tablet ml-6-tablet ml-4 mr-4 fade-in"
       >
         <slot />
       </section>

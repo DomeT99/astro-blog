@@ -2,7 +2,6 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/common/Hero.astro";
 import BlogCard from "../../components/blog/BlogCard.astro";
-import Pagination from "../../components/common/Pagination.astro";
 import { fetchCollection } from "../../utils/blog";
 
 const posts = await fetchCollection();
@@ -28,7 +27,7 @@ posts.sort((a: any, b: any) => b.data.date - a.data.date);
       <div class="column is-12">
         {
           posts.map((post) => (
-            <div class="mb-6">
+            <div class="mb-6 fade-in">
               <BlogCard
                 title={post.data.title}
                 date={post.data.date}
