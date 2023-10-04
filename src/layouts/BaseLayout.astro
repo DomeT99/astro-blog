@@ -22,7 +22,10 @@ const { pageTitle, pageDescription } = Astro.props;
         : `Domenico Tenace - ${pageTitle}`}
       description={pageDescription}
       extend={{
-        link: [{ rel: "icon", href: "/favicon.ico" }],
+        link: [
+          { rel: "icon", href: "/favicon.ico" },
+          { rel: "me", href: "https://mastodon.uno/@dvalin99" },
+        ],
         meta: [
           {
             name: "viewport",
