@@ -19,3 +19,15 @@
 .columns {
   margin: 0;
 }
+
+@media all and (min-width: 768px) { 
+  ol, ul {
+    padding-left: 1.75rem;
+  } 
+}
+
+@media not all and (min-width: 768px) { 
+  ol, ul {
+    padding-left: 1.25rem;
+  } 
+}
